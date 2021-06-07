@@ -7,9 +7,9 @@ tasks.withType(JavaCompile)
             options.encoding = 'UTF-8'
         }
 task runApp(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-
     main = 'src/main/java/Main'
+    
+    classpath = sourceSets.main.runtimeClasspath
 
     // arguments to pass to the application
     args 'appArg1'
