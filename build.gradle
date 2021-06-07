@@ -6,9 +6,13 @@ tasks.withType(JavaCompile)
         {
             options.encoding = 'UTF-8'
         }
-        
-task stage {
-    dependsOn clean, build
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'src/main/java/Main'
+
+    // arguments to pass to the application
+    args 'appArg1'
 }
 group 'org.example'
 version '1.0-SNAPSHOT'
