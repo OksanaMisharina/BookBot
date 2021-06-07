@@ -6,17 +6,9 @@ tasks.withType(JavaCompile)
         {
             options.encoding = 'UTF-8'
         }
-task runApp(type: JavaExec) {
-    main = 'src.main.java.Main'
-    
-    classpath = sourceSets.main.runtimeClasspath
-
-    // arguments to pass to the application
-    args 'appArg1'
-}
 
 task stage{
-    dependsOn( runApp)
+    dependsOn( JavaExec)
 }
 
 group 'org.example'
