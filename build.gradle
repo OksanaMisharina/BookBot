@@ -6,6 +6,10 @@ tasks.withType(JavaCompile)
         {
             options.encoding = 'UTF-8'
         }
+        
+task stage {
+    dependsOn clean, build
+}
 group 'org.example'
 version '1.0-SNAPSHOT'
 
