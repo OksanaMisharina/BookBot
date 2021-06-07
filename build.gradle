@@ -6,7 +6,7 @@ tasks.withType(JavaCompile)
         {
             options.encoding = 'UTF-8'
         }
-task runApp(type: JavaExec) {
+task stage(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     main = 'src/main/java/Main'
