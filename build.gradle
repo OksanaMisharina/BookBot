@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+tasks.withType(JavaCompile)
+        {
+            options.encoding = 'UTF-8'
+        }
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.telegram:telegrambots:4.3.1'
+    compile 'com.google.apis:google-api-services-books:v1-rev20201021-1.31.0'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
